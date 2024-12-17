@@ -22,10 +22,20 @@ if (!localStorage.getItem("trainDeparted")) {
 
 // Initialize the page
 function init() {
+    resizeWindow()
     loadPage();
     checkTrainEvent();
     //localStorage.setItem("trainDeparted", "false");
 }
+
+function resizeWindow() {
+    console.log(window.innerWidth)
+    let scale = window.innerWidth / 1400;
+    let c = document.getElementById("container")
+    c.style.transform = `scale(${scale})`
+}
+
+window.addEventListener("resize", resizeWindow)
 
 // Load respects data and render animals
 function loadPage() {

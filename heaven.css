@@ -7,7 +7,6 @@ body {
 }
 
 #container {
-    position: relative;
     overflow: hidden;
     width: 1403px;
     height: 1024px;
@@ -18,6 +17,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
 }
 
 /* Background styles for different states */

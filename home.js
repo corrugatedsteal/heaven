@@ -110,8 +110,18 @@ document.getElementById("heaven-sign").addEventListener("click", goToHeaven);
 
 // Initialize the app on load
 window.onload = () => {
+    resizeWindow()
     initializeApp();
 };
+
+function resizeWindow() {
+    console.log(window.innerWidth)
+    let scale = window.innerWidth / 1400;
+    let c = document.getElementById("container")
+    c.style.transform = `scale(${scale})`
+}
+
+window.addEventListener("resize", resizeWindow)
 
 resetButton.addEventListener("click", function(){
     localStorage.clear();
